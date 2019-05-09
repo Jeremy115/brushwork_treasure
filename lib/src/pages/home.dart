@@ -3,51 +3,41 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class _MyHomePageState extends State<MyHomePage> {
-  String _counter = "";
-
-  void _incrementCounter() {
-    setState(() {
-      _counter="陈";
-    });
-  }
+class MyHomePage extends StatelessWidget {
+ final List<Tab> myTabs = <Tab>[
+    new Tab(text: '语文'),
+    new Tab(text: '数学'),
+    new Tab(text: '英语'),
+    new Tab(text: '政治'),
+    new Tab(text: '经济'),
+    new Tab(text: '体育')
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:+',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-          ],
+    return new DefaultTabController(
+      length: myTabs.length,
+      child: new Scaffold(
+        appBar: new AppBar(
+          title: new Text("顶部tab切换"),
+          bottom: new TabBar(
+              tabs: myTabs,
+              isScrollable: true,
+              indicatorSize: TabBarIndicatorSize.tab,
+              labelColor: Colors.white,
+              labelStyle: new TextStyle(fontSize: 16.0),
+              unselectedLabelColor: Colors.black,
+              unselectedLabelStyle: new TextStyle(fontSize: 12.0)
+          ),
+        ),
+        body: new TabBarView(
+          children: myTabs.map((Tab tab) {
+            return new Center(
+              child: new Text(tab.text)
+            );
+          }).toList()
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), 
     );
   }
-}
-
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
 }
