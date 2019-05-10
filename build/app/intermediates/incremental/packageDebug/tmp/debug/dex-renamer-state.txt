@@ -1,4 +1,4 @@
-#Thu Apr 25 18:57:50 CST 2019
-base.0=E\:\\git\\brushwork_treasure\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+#Fri May 10 21:14:35 CST 2019
+base.0=E\:\\git\\flutter\\brushwork_treasure\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

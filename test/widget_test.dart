@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:brushwork_treasure/main.dart';
-
 import '../lib/src/app/app.dart';
 
 void main() {

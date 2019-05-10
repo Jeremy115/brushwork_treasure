@@ -1,4 +1,4 @@
-import 'package:brushwork_treasure/src/pages/tabs.dart';
+import 'package:brushwork_treasure/src/comportants/tab_navigator.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TabsPage()
+      home: TabNavigator()
     );
   }
 }
